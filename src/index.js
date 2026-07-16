@@ -1,6 +1,9 @@
+import dns from "node:dns";
 import dotenv from "dotenv";
 import { fileURLToPath } from "url";
 import connectDB from "./db/index.js";
+
+dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
 
 const envPath = fileURLToPath(new URL("../.env", import.meta.url));
